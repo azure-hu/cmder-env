@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2021-01-11 16:33:54" build="191012">
+		<key name=".Vanilla" modified="2021-01-19 12:20:42" build="191012">
 			<value name="ColorTable00" type="dword" data="00362b00"/>
 			<value name="ColorTable01" type="dword" data="00423607"/>
 			<value name="ColorTable02" type="dword" data="00756e58"/>
@@ -114,7 +114,7 @@
 			<value name="BackGround Image" type="string" data="%CMDER_ROOT%\vendor\Aperture Science Innovators Solarized.jpg"/>
 			<value name="bgImageDarker" type="hex" data="F0"/>
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
-			<value name="bgOperation" type="hex" data="01"/>
+			<value name="bgOperation" type="hex" data="07"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
 			<value name="AlphaValue" type="hex" data="E8"/>
 			<value name="AlphaValueSeparate" type="hex" data="01"/>
@@ -123,12 +123,12 @@
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd Width" type="dword" data="000000c0"/>
-			<value name="ConWnd Height" type="dword" data="00000038"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="ConWnd Width" type="dword" data="00000042"/>
+			<value name="ConWnd Height" type="dword" data="00000010"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="589"/>
-			<value name="ConWnd Y" type="long" data="315"/>
+			<value name="ConWnd X" type="long" data="1266"/>
+			<value name="ConWnd Y" type="long" data="896"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -880,9 +880,19 @@
 				<line data="set PATH_OLD=%PATH%"/>
 				<line data="set PATH_PLUS=%CMDER_ROOT%"/>
 				<line data=" "/>
+				<line data="set 7ZIP_PATH=%CMDER_ROOT%\bin\7-ZIP\"/>
+				<line data="IF EXISTS %7ZIP_PATH% ("/>
+				<line data=" set PATH_PLUS=%PATH_PLUS%;%7ZIP_PATH%"/>
+				<line data=")"/>
+				<line data=" "/>
 				<line data="set NPP_PATH=%CMDER_ROOT%\bin\npp_x86\"/>
 				<line data="IF EXISTS %NPP_PATH% ("/>
 				<line data=" set PATH_PLUS=%PATH_PLUS%;%NPP_PATH%"/>
+				<line data=")"/>
+				<line data=" "/>
+				<line data="set WINMERGE_PATH=%CMDER_ROOT%\bin\WinMerge\"/>
+				<line data="IF EXISTS %WINMERGE_PATH% ("/>
+				<line data=" set PATH_PLUS=%PATH_PLUS%;%WINMERGE_PATH%"/>
 				<line data=")"/>
 				<line data=" "/>
 				<line data="set NODE_PATH=%CMDER_ROOT%\bin\v15.5.1\"/>
